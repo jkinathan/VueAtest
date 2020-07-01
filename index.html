@@ -9,15 +9,30 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
+  <style>
+      .color-red{
+          color: red;
+      }
+      .color-blue{
+          color: blue;
+      }
+      .is-loading{
+          background: aqua;
+      }
+  </style>
   <body>
       
       <div id="root">
         
-        <ul>
+        <!-- <ul>
             <li v-for="name in names" v-text="name"></li>
         </ul>
-        <input id="input" type="text" v-model="newName">
-        <button @click="onClick">add name</button>
+        <input id="input" type="text" v-model="newName"> -->
+        <!-- <button @click="onClick">add name</button> -->
+        <h1 v-bind:class="classname">Hello World</h1>
+        <button v-bind:title="title">Hover over me</button>
+        <button v-bind:disabled="disa" class="btn btn-primary" v-on:click="disableM">Disable Check</button>
+        <button v-bind:class="{ 'is-loading' : isloading }" v-on:click="toggleclass">Click me</button>
       </div>
 
 
@@ -26,18 +41,30 @@
        
         
         app = new Vue({
-            el: '#root',
+            el: '#root',   //mounting vue to our root div so that it can be used
             data: {
-                newName: '',
-                names: ['joe','jack','murvin','jordan']
+                disa:false,
+                isloading: false,
+                classname:"color-red",
+                title: "now the title is being set through javascript"
+                //newName: '',
+                //names: ['joe','jack','murvin','jordan']
         },
 
         methods: {
 
+            disableM(){
+                this.disa = true;
+            },
+
             onClick() {
                 this.names.push(this.newName);
                 this.newName='';
+            },
+            toggleclass(){
+                this.isloading = true; 
             }
+
 
         }
             
