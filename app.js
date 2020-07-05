@@ -3,20 +3,28 @@ new Vue({
 
   data: {
     name: "Jordy",
+    x:0,
+    y:0,
     age:25,
     job: "Ninja",
     website: "https://github.com/jkinathan",
     websiteTag:'<a href="https://github.com/jkinathan">jordan Github</a>',
   },
   methods:{
-    addyear(){
+    updatexy(event){
+      //console.log(event);
+      this.x = event.offsetX;
+      this.y = event.offsetY;
+    }
+    ,
+    addyear(inc){
 
-      this.age= this.age+1;
+      this.age = this.age+inc;
 
     },
-    subyear(){
+    subyear(dec){
 
-      this.age= this.age-1;
+      this.age = this.age-dec;
 
     },
     greet(time){
