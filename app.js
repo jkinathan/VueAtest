@@ -6,8 +6,9 @@ new Vue({
     job: "Ninja",
   },
   methods:{
-    greet(){
-      return "Good Morning"
+    greet(time){
+
+      return "Good "+time+" "+this.name;
     }
   }
 });
