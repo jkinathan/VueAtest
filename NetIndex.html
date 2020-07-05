@@ -18,6 +18,10 @@
         <h1>{{ greet('afternoon') }}</h1>
         <p>Name: {{ name }}</p>
         <p>Job: {{ job }} </p>
+        <h2> Data Binding </h2>
+        <a v-bind:href="website">JkinathanGit</a>
+        <input type="text" v-bind:value="name"/>
+        <p v-html="websiteTag"></p>
     </div>
 
 

@@ -4,6 +4,8 @@ new Vue({
   data: {
     name: "Jordy",
     job: "Ninja",
+    website: "https://github.com/jkinathan",
+    websiteTag:'<a href="https://github.com/jkinathan">jordan Github</a>',
   },
   methods:{
     greet(time){
