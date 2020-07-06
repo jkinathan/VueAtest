@@ -14,6 +14,12 @@ new Vue({
     clicker(){
       alert("You Clicked me");
     },
+    logname(){
+      console.log("You entered your name");
+    },
+    logage(){
+      console.log("You entered your age");
+    },
     updatexy(event){
       //console.log(event);
       this.x = event.offsetX;
