@@ -2,6 +2,8 @@ new Vue({
   el:"#vue-app",
 
   data: {
+    available: false,
+    nearby: false,
     a:0,
     b:0,
     name2: "",
@@ -15,6 +17,12 @@ new Vue({
     websiteTag:'<a href="https://github.com/jkinathan">jordan Github</a>',
   },
   computed:{
+    compClasses(){
+      return {
+        available: this.available,
+        nearby: this.nearby
+      }
+    },
     addToA(){
       console.log("addToA");
       return this.a + this.age;
