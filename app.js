@@ -11,6 +11,9 @@ new Vue({
     websiteTag:'<a href="https://github.com/jkinathan">jordan Github</a>',
   },
   methods:{
+    clicker(){
+      alert("You Clicked me");
+    },
     updatexy(event){
       //console.log(event);
       this.x = event.offsetX;

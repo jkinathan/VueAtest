@@ -30,13 +30,14 @@
 
         <h3>Events</h3>
         <p>My Age is : {{ age }}</p>
-        <button @click="addyear(1)"> Add a year </button>
+        <button @click.once="addyear(1)"> Add a year </button>
         <button v-on:click="subyear(1)"> Subtract a year </button>
         <button @dblclick="addyear(10)"> Add 10 years </button>
         <button v-on:dblclick="subyear(10)"> Subtract 10 years </button>
         <div id="canvas" v-on:mousemove="updatexy">
             {{ x }}, {{ y }}
         </div>
+        <a v-on:click.prevent="clicker" href="https://www.thenetninja.co.uk">The NetNinja</a>
     </div>
 
 
