@@ -2,6 +2,8 @@ new Vue({
   el:"#vue-app",
 
   data: {
+    name2: "",
+    age2: "",
     name: "Jordy",
     x:0,
     y:0,
@@ -15,10 +17,10 @@ new Vue({
       alert("You Clicked me");
     },
     logname(){
-      console.log("You entered your name");
+
     },
     logage(){
-      console.log("You entered your age");
+       
     },
     updatexy(event){
       //console.log(event);
