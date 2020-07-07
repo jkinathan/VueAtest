@@ -34,6 +34,16 @@
   <body>
 
     <div id="vue-app">
+      <h1>Conditionals</h2>
+        <button v-on:click="error = !error">Toggle Error</button>
+        <button v-on:click="success = !success">Toggle Success</button>
+          <!-- <p v-if="error">There is an error</p>
+          <p v-else-if="success">Wooh!!! success</p> -->
+          <p v-show="error">Error</p>
+          <p v-show="success">Wooh Success!</p>
+
+
+
       <h1>Dynamic Css </h1>
       <h2>Example 1 </h2>
       <!-- <div v-on:click="available = !available" v-bind:class="{available: available}">
