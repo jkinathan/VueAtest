@@ -2,9 +2,17 @@ new Vue({
   el:"#vue-app",
 
   data: {
+    namer:"jack",
+    characters:['Mario','Luigi','Yoshi','Bowser'],
+    ninjas:[
+      {name:"Ryu",age:25},
+      {name:"Yoshi",age:35},
+      {name:"Ken",age:55}
+    ],
+
     error: false,
     success: false,
-    
+
     available: false,
     nearby: false,
     a:0,
