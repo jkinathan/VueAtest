@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+
+  <style>
+  #bag{
+    width: 200px;
+    height: 500px;
+    margin: 0 auto;
+    background: url(bag.png) center no-repeat;
+    background-size: 80%
+  }
+  #bag-health{
+    width: 200px;
+    border: 2px solid #000;
+    margin: 0 auto 20px auto;
+  }
+  #bag-health div{
+    height: 20px;
+    background: crimson;
+  }
+  #gamecontrol{
+
+    margin: 0px 600px auto;
+  }
+  #bag.burst{
+    background: url(bag-burst.png)  center no-repeat;
+    background-size: 80%
+  }
+  </style>
+
+<body>
+
+    <div id="vue-app">
+      <!--bag image -->
+      <div id="bag" v-bind:class="{ burst: ended }">
+      </div>
+
+      <!-- bag health -->
+      <div id="bag-health">
+        <div v-bind:style="{ width:health + '%'}">
+          {{ health }}%
+        </div>
+      </div>
+
+      <!-- game controls -->
+      <div id="gamecontrol">
+        <button v-on:click="punch" v-show="!ended" style="color:green">Punch</button>
+        <button v-on:click="restart" style="color:red">Restart</button>
+      </div>
+
+    </div>
+
+  <script src="punchy.js"></script>
+</body>
+</html>
