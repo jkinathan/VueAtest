@@ -14,17 +14,16 @@
   </style>
 
   <body>
-<h1> Components</h1>
-      <div id="vue-app-one">
-        <h2>Vue app one</h2>
-        <greeting></greeting>
+      <div id="vue-app">
+        <h1> Refs </h1>
+        <input type="text" ref="input"/>
+        <button v-on:click="refer">Submit</button>
+        <p>Your favourite food: {{ output }}</p>
+        <div ref="test">
+            Hello
+        </div>
       </div>
 
-      <div id="vue-app-two">
-        <h2>Vue App two</h2>
-        <greeting></greeting>
-      </div>
-
-  <script src="appa.js"></ script>
-  </body>
+<script src="refs.js"></script>
+</body>
 </html>
