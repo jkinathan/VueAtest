@@ -6,8 +6,11 @@
 </template>
 
 <script>
+import ninjas from './Ninja.vue'
 export default {
-
+  components: {
+    'ninjasc': ninjas
+  },
   data () {
     return {
       title: "Ninja App"
