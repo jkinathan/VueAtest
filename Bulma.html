@@ -18,7 +18,7 @@
       <div id="root" class="container">
 
         <modal v-if="showmodal" @close="showmodal=false">
-            <p>We insert any text here!!!</p>
+            <p>We insert any text here!!! but slot is being used here</p>
         </modal>
 
         <button v-on:click="showmodal = true">Show Modal</button>
