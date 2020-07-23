@@ -10,7 +10,7 @@ export default {
 
   data () {
     return {
-      ninjas:["yoshi","Mario","Jodi"]
+      ninjas:["murvin","jordan","tony"]
     }
   }
 }
