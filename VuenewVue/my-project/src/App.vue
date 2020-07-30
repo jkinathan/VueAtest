@@ -11,13 +11,13 @@
 <script>
 import Header from './components/header'
 import footer from './components/footer'
-import ninjac from './components/ninjas'
+import mydoll from './components/ninjas'
 
 export default {
   components:{
     'app-header':Header,
     'app-footer':footer,
-    'myninja':ninjac
+    'myninja':mydoll
   },
 
   data () {
