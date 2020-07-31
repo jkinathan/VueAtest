@@ -1,17 +1,27 @@
 <template>
 
   <Header>
-    <h1>{{ title }}</h1>
+    <h1 v-on:click="changeTitle">{{ titlep }}</h1>
   </Header>
 
 </template>
 
 <script>
 export default {
-
+  // first in the props we pass in the name of the prop and open it as an object and define some attributes
+  props:{
+    titlep:{
+      type: String
+    }
+  },
   data () {
     return {
-      title: "Vue Ninjas"
+
+    }
+  },
+  methods:{
+    changeTitle(){
+      this.titlep = "Vue my Wizards"
     }
   }
 }
