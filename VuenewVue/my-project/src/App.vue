@@ -2,7 +2,8 @@
 
   <div>
     <app-header></app-header>
-    <myninja></myninja>
+    <myninja v-bind:ninjasp="ninjas"></myninja>
+    <!-- ninjasp is the property name which will call the ninjas array -->
     <app-footer></app-footer>
   </div>
 
@@ -22,7 +23,13 @@ export default {
 
   data () {
     return {
-
+      ninjas: [
+        {name: 'Jordan', speciality: 'developer', show:false},
+        {name: 'murvin', speciality: 'Java wizard', show:false},
+        {name: 'danny', speciality: 'civil engineer', show:false},
+        {name: 'Patricia', speciality: 'Lawyer', show:false},
+        {name: 'Germinah', speciality: 'doctor', show:false},
+      ]
     }
   }
 }
