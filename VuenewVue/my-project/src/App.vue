@@ -1,7 +1,7 @@
 <template>
 
   <div>
-    <app-header v-bind:titlep="title"></app-header>
+    <app-header v-bind:titlep="title" v-on:changetitleEvent="updateTitle($event)"></app-header>
     <myninja v-bind:ninjasp="ninjas"></myninja>
     <!-- ninjasp is the property name which will call the ninjas array -->
     <!-- <hr>
@@ -34,7 +34,12 @@ export default {
       ],
       title:"Vue my Ninjas"
     }
-  }
+  },
+  methods: {
+    updateTitle(updated){
+      this.title = updated;
+    }
+  },
 }
 </script>
 

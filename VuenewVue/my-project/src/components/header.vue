@@ -21,7 +21,8 @@ export default {
   },
   methods:{
     changeTitle(){
-      this.titlep = "Vue my Wizards"
+      //this.titlep = "Vue my Wizards"
+      this.$emit("changetitleEvent", "Vue Wizzardds")
     }
   }
 }
