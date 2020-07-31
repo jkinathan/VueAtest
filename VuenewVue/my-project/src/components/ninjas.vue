@@ -13,7 +13,12 @@
 
 <script>
 export default {
-  props:["ninjasp"],
+  props:{
+    ninjasp:{
+      type:Array,
+      required: true
+    }
+  },
   data () {
     return {
 
