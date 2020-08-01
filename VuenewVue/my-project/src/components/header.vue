@@ -7,11 +7,13 @@
 </template>
 
 <script>
+import { bus } from '../main';
 export default {
   // first in the props we pass in the name of the prop and open it as an object and define some attributes
   props:{
     titlep:{
-      type: String
+      type: String,
+      required: true
     }
   },
   data () {
@@ -22,7 +24,12 @@ export default {
   methods:{
     changeTitle(){
       //this.titlep = "Vue my Wizards"
-      this.$emit("changetitleEvent", "Vue Wizzardds")
+      //emitting an event called changetitleEvent and passing in another parameter which the root element will listen to
+
+      // this.$emit("changetitleEvent", "Vue Wizzardds")
+      //now we emit from the event bus
+      this.titlep = 'Vueheader'//this one changes for this component
+      bus.$emit('titleChangedEventbusname','Vue2 Wizards footer ');//this one changes for second component footer coz it waits to listen from it
     }
   }
 }
