@@ -28,7 +28,7 @@ export default {
 
       // this.$emit("changetitleEvent", "Vue Wizzardds")
       //now we emit from the event bus
-      this.titlep = 'Vueheader'//this one changes for this component
+      this.titlep = 'Vue2 Wizards header'//this one changes for this component
       bus.$emit('titleChangedEventbusname','Vue2 Wizards footer ');//this one changes for second component footer coz it waits to listen from it
     }
   }
